@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+nav{
+    background: linear-gradient(to right, pink,red 40%);
+    height: 8vh;
+    display: flex;
+    
+}
+nav h1{
+    display: inline-block;
+    margin-top: 10px;
+}
+nav ol{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60%;
+    align-items: center;
+}
+
+nav li{
+    display: flex;
+    margin-right: 20px;
+    
+}
