@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript</h1>
+    <script>
+        var num = [1, 2, 3, 4, 5, 6, 7, 8];
+        var dob = num.map((element) => { return Math.pow(element, 2) });
+        console.log(dob);
+        var even = num.filter((element) => { return element % 2 === 0 });
+        console.log(even);
+        var odd = num.filter((element) => { return element % 2 !== 0 });
+        console.log(odd);
+        const elements = ["Hello", 7, { message: "Hi mom" }, true];
+        console.log(elements);
+        console.log(typeof elements)
+
+
+        const movies = ["The Wolf of Wall Street", "Zootopia", "Babysitting"];
+        movies.forEach(movie => {
+            console.log(movie);
+        });
+
+        var da = new Date();
+        document.write(da.getMinutes());
+    </script>
+</body>
+
+</html>

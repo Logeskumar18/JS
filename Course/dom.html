@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container border border-success my-5">
+        <h1 class="h1 text-center" id="main">Main Heading</h1>
+        <ul class="list-group m-5" id="con">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+        </ul>
+    </div>
+
+    <div class="parent container" id="par">
+
+    </div>
+    <button class="btn" id="boo">Add</button>
+</body>
+<script>
+
+    const li = document.getElementsByTagName('li');
+    console.log(li);
+
+    const mainh1 = document.getElementById('main');
+    mainh1.addEventListener('click', () => { alert('Button clicked!'); });
+
+    console.log(mainh1.after());
+
+    const par = document.getElementById('par');
+    const btn = document.getElementById('boo');
+    const con = document.getElementById('con');
+
+    btn.addEventListener("click", () => {
+        const newE = document.createElement('h1');
+        newE.textContent = 'Hii';
+
+        par.appendChild(newE);
+    });
+
+    btn.addEventListener("click", () =>{
+        const li5 = document.createElement('li');
+        li5.className = "list-group-item";
+        li5.appendChild(document.createTextNode("fifth"));
+        con.appendChild(li5);
+    })
+
+    console.log(con.childNodes);
+    console.log(con.firstChild);
+    console.log(con.lastChild);
+
+    con.childNodes[1].style.color = 'green';
+    console.log(con.children);
+    
+    
+</script>
+
+</html>

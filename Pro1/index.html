@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Pro 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        section{
+            background-image: url("https://picsum.photos/1400/700");
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container-fluid">
+       <div class="container d-flex justify-content-center flex-column">
+        <h1 class="text-center p-5">People Entered</h1>
+        <h2 id="ct" class="text-center">0</h2>
+        <button type="button"  class="btn btn-danger mt-5" style="width: 200px; margin-inline: auto;" onclick="incr()">Danger</button>
+       </div>
+    </section>
+
+    <script>
+        let co = 0;
+        function incr(){
+            co +=1;
+            document.getElementById('ct').innerText = co;
+            console.log(co);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
